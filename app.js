@@ -7,7 +7,7 @@ const MongoClient = mongo.MongoClient;
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const mongourl = "mongodb+srv://Bandi:bandi4002@cluster0.2bfat.mongodb.net/bandi?retryWrites=true&w=majority";
+const mongourl = "mongodb+srv://venky:bandi@cluster0.2bfat.mongodb.net/venkatesh?retryWrites=true&w=majority";
 let db;
 
 app.use(cors());
@@ -118,7 +118,7 @@ app.get('/orders',(req,res) => {
 //connection with mongo serer
 MongoClient.connect(mongourl,(err,connection) => {
   if(err) console.log(err);
-  db = connection.db('bandi');
+  db = connection.db('venkatesh');
 
 //checking port connection
   app.listen(port,(err) => {
